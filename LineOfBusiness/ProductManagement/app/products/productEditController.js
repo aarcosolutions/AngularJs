@@ -18,11 +18,19 @@
             $event.stopPropagation(); //prevent event to be propagated
             vm.opened != vm.opened;
         };
-        vm.submit = function ()
+        vm.submit = function (valid)
         {
-            vm.product.$save(function (data) {
-                toastr.success("Saved Successfully!!!");
-            });
+            if (valid)
+            {
+                vm.product.$save(function (data) {
+                    toastr.success("Saved Successfully!!!");
+                });
+            }
+            else
+            {
+                alert("Please fix the error!!")
+            }
+            
         };
 
         vm.cancel = function () {
