@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js" type="text/javascript"></script>
+    <script src="scripts/app.js" type="text/javascript"></script>
+</head>
+<body ng-controller="ReservationController">
+    <div>
+        ReservationId : {{reservations.ReservationId}}
+    </div>
+    <div>
+        Client Name : {{reservations.ClientName}}
+    </div>
+    <div>
+        Location : {{reservations.Location}}
+    </div>
+    <div>
+        <img ng-src="{{reservations.ImageSrc}}" title="inmage of {{reservations.Location}}" />
+    </div>
+</body>
+</html>
