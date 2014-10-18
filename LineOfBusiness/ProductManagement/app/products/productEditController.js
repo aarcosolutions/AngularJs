@@ -1,9 +1,31 @@
 ﻿(function () {
     "use strict";
 
-    var productEditController = function (product, $state) {
+    var productEditController = function (product, productService, $state) {
         var vm = this;
         vm.product = product;
+        vm.priceOption = "percent";
+
+        vm.marginPercent = function () {
+            return productService.calculateMarginPercent(vm.product.price, vm.product.cost);
+        }
+
+        /* Calculate the price based on a markup */
+        vm.calculatePrice = function () {
+            var price = 0;
+
+            if (vm.priceOption == 'amount') {
+                price = productService.calculatePriceFromAmount(
+                    vm.product.cost, vm.markupAmount);
+            }
+
+            if (vm.priceOption == 'percent') {
+                price = productService.calculatePriceFromPercent(
+                    vm.product.cost, vm.markupPercent);
+            }
+            vm.product.price = price;
+        };
+
         if(vm.product && vm.product.productId)
         {
             vm.title = "Edit: " + vm.product.productName;
@@ -54,6 +76,6 @@
         }
     }
 
-    angular.module("productManagement").controller("ProductEditController", ["product","$state", productEditController]);
+    angular.module("productManagement").controller("ProductEditController", ["product", "productService", "$state", productEditController]);
 
 }());
