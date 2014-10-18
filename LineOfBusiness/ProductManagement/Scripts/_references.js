@@ -19,3 +19,4 @@
 /// <reference path="../resources/js/ui-utils.js" />
 /// <reference path="../resources/js/ui-bootstrap-tpls-0.11.2.js" />
 /// <reference path="../resources/js/toastr.js" />
+/// <reference path="../common/services/productService.js" />
