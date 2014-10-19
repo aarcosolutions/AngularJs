@@ -1,6 +1,6 @@
 ﻿(function () {
     "use strict";
-    var app = angular.module("productManagement", ["common.services", "ui.router", "ui.mask", "ui.bootstrap", "productResourceMock"]);
+    var app = angular.module("productManagement", ["common.services", "ui.router", "ui.mask", "ui.bootstrap", "angularCharts","productResourceMock"]);
     //here we are passing common services module as a dependency for this module
 
 
@@ -70,5 +70,17 @@
 
                 }
             })
+        .state("priceAnalytics", {
+            url: "/priceAnalytics",
+            templateUrl: "app/prices/priceAnalyticsView.html",
+            controller: "PriceAnalyticsController",
+            resolve: {
+                productResource: "productResource",
+                products: function(productResource)
+                {
+                    return productResource.query().$promise;
+                }
+            }
+        })
     }]);
 }());

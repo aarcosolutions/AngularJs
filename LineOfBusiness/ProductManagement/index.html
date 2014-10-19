@@ -12,11 +12,14 @@
     <script src="resources/js/ui-utils.js"></script>
     <script src="resources/js/ui-bootstrap-tpls-0.11.2.js"></script>
     <script src="resources/js/toastr.js"></script>
+    <script src="resources/js/d3.js"></script>
+    <script src="resources/js/angular-charts.js"></script>
 
     <script src="app/app.js"></script>
     <script src="app/products/productListController.js"></script>
     <script src="app/products/productDetailController.js"></script>
     <script src="app/products/productEditController.js"></script>
+    <script src="app/prices/priceAnalyticsController.js"></script>
 
     <script src="common/services/common.services.js"></script>
     <script src="common/services/productResource.js"></script>
@@ -43,6 +46,7 @@
             <ul class="nav navbar-nav">
                 <li><a ui-sref="productList">Product List</a></li>
                 <li><a ui-sref="productEdit.info({productId:0})"><i class="glyphicon glyphicon-plus"></i>Add Product</a></li>
+                <li><a ui-sref="priceAnalytics">Price Analytics</a></li>
             </ul>
         </div>
     </nav>

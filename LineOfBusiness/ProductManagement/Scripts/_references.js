@@ -20,3 +20,6 @@
 /// <reference path="../resources/js/ui-bootstrap-tpls-0.11.2.js" />
 /// <reference path="../resources/js/toastr.js" />
 /// <reference path="../common/services/productService.js" />
+/// <reference path="../resources/js/d3.js" />
+/// <reference path="../resources/js/angular-charts.js" />
+/// <reference path="../app/prices/priceAnalyticsController.js" />
