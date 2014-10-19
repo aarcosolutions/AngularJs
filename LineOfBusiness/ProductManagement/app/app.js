@@ -4,6 +4,20 @@
     //here we are passing common services module as a dependency for this module
 
 
+    //global exception handler
+    app.config(function ($provide) {
+        $provide.decorator("$exceptionHandler",
+            ["$delegate",
+                function ($delegate) {
+                    return function (exception, cause) {
+                        exception.message = "Please contact the Help Desk! \n Message: " +
+                                                                exception.message;
+                        $delegate(exception, cause);
+                        alert(exception.message);
+                    };
+                }]);
+    });
+
     //let us config the route using $stateProvider service of 'ui-router' module.
     //you will define a state which will be:
     //-linked to a url, 
