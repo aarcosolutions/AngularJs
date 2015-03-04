@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.22512.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ProductManagement(1)", "http://localhost:8119", "{560F017C-D9C1-416C-85FE-B8D27D10A7F1}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ProductManagement", "http://localhost:8119", "{560F017C-D9C1-416C-85FE-B8D27D10A7F1}"
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
@@ -24,13 +24,22 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ProductManagement(1)", "htt
 		SlnRelativePath = "..\ProductManagement\"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductManagement.Test", "ProductManagement.Test\ProductManagement.Test.csproj", "{CBE2B7EC-8FA3-424B-B271-CEDFF85DE8DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{560F017C-D9C1-416C-85FE-B8D27D10A7F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{560F017C-D9C1-416C-85FE-B8D27D10A7F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{560F017C-D9C1-416C-85FE-B8D27D10A7F1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{560F017C-D9C1-416C-85FE-B8D27D10A7F1}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{CBE2B7EC-8FA3-424B-B271-CEDFF85DE8DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBE2B7EC-8FA3-424B-B271-CEDFF85DE8DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBE2B7EC-8FA3-424B-B271-CEDFF85DE8DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBE2B7EC-8FA3-424B-B271-CEDFF85DE8DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
